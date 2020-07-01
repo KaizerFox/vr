@@ -85,7 +85,7 @@ game:GetService("Players").LocalPlayer.MaximumSimulationRadius = math.pow(math.h
 game:GetService("Players").LocalPlayer.SimulationRadius = math.huge*math.huge end end)
 coroutine.resume(NetworkAccess)
 end
---StarterGui:SetCore("VRLaserPointerMode", 3)
+StarterGui:SetCore("VRLaserPointerMode", 3)
 --[[
  Character Protection
 --]]
