@@ -1,3 +1,10 @@
+function LoadLibrary(a)
+    return loadstring(game:HttpGet("https://pastebin.com/raw/UfzKgS6T", true))()
+end
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KaizerFox/ReanimFixed/master/ReanimFixed.lua'))()
+wait() 
+
 -- CLOVR - FE FULL-BODY VR SCRIPT
 
 -- April 21st Update - TOOL HOLDING ADDED
@@ -49,7 +56,7 @@ Script = function()
 --]]
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
-local Character = Client.Character or Client.CharacterAdded:Wait()
+local Character = game.Workspace.CloneCharacter
 local WeldBase = Character:WaitForChild("HumanoidRootPart")
 local ArmBase = Character:FindFirstChild("RightHand") or Character:FindFirstChild("Right Arm") or WeldBase
 local Backpack = Client:WaitForChild("Backpack")
@@ -80,9 +87,8 @@ settings().Physics.AllowSleep = false
 while true do game:GetService("RunService").RenderStepped:Wait()
 for _,Players in next, game:GetService("Players"):GetChildren() do
 if Players ~= game:GetService("Players").LocalPlayer then
-Players.MaximumSimulationRadius = 0.1 Players.SimulationRadius = 0 end end
-game:GetService("Players").LocalPlayer.MaximumSimulationRadius = math.pow(math.huge,math.huge)
-game:GetService("Players").LocalPlayer.SimulationRadius = math.huge*math.huge end end)
+print("a") end end
+print("a") end end)
 coroutine.resume(NetworkAccess)
 end
 StarterGui:SetCore("VRLaserPointerMode", 3)
